@@ -32,4 +32,5 @@ RUN chown oracle:dba /u01/app/oracle/product/11.2.0/xe/config/scripts/*.ora \
 
 # Run script
 ADD config/start.sh /
-CMD /start.sh
+RUN chmod +x /start.sh && chmod 755 /start.sh
+CMD ["/bin/sh", "-c", "/start.sh"] 

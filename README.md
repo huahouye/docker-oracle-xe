@@ -23,7 +23,7 @@ The only piece of magic in this image :).
 
 ## How to use
 
-Basically `docker run -p 8089:8080 -p 1521:1521 -d  madhead/docker-oracle-xe` will start new container and bind it's local ports `1521` and `8080` to host's `1521` and `8089` respectively.
+Basically `docker run -d  --name oracle -p 8089:8080 -p 1521:1521 madhead/docker-oracle-xe` will start new container named oracle and bind it's local ports `1521` and `8080` to host's `1521` and `8089` respectively.
 Read [Docker documentation](http://docs.docker.com/userguide/usingdocker/) for details.
 
 Oracle Web Management Console (apex) will be available at [http://localhost:8089/apex](http://localhost:8089/apex).
